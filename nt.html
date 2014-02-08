@@ -1,0 +1,62 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module nt</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>nt</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/share/nt.py">/mnt/share/nt.py</a></font></td></tr></table>
+    <p><tt>Library&nbsp;of&nbsp;elementary&nbsp;number&nbsp;theory<br>
+&nbsp;<br>
+This&nbsp;library&nbsp;contains&nbsp;some&nbsp;basic&nbsp;number&nbsp;theory&nbsp;functions.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Factor"><strong>Factor</strong></a>(n)</dt><dd><tt><a href="#-Factor">Factor</a>(n)&nbsp;returns&nbsp;the&nbsp;factor&nbsp;list&nbsp;of&nbsp;n<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;factors&nbsp;of&nbsp;n,&nbsp;in&nbsp;the&nbsp;form&nbsp;{a1:b1,&nbsp;a2:b2,&nbsp;...},&nbsp;which&nbsp;means<br>
+n&nbsp;has&nbsp;b1&nbsp;many&nbsp;factor&nbsp;a1's,&nbsp;b2&nbsp;many&nbsp;factor&nbsp;a2's,&nbsp;...</tt></dd></dl>
+ <dl><dt><a name="-FindFactor"><strong>FindFactor</strong></a>(n)</dt><dd><tt><a href="#-FindFactor">FindFactor</a>(n)&nbsp;returns&nbsp;a&nbsp;factor&nbsp;of&nbsp;n<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;factor&nbsp;of&nbsp;n&nbsp;if&nbsp;n&nbsp;is&nbsp;a&nbsp;composite&nbsp;number.<br>
+When&nbsp;the&nbsp;method&nbsp;fails,&nbsp;return&nbsp;0.<br>
+The&nbsp;method&nbsp;uses&nbsp;pollard&nbsp;rho&nbsp;factorization&nbsp;algorithm.</tt></dd></dl>
+ <dl><dt><a name="-GCD"><strong>GCD</strong></a>(a, b)</dt><dd><tt><a href="#-GCD">GCD</a>(a,b)&nbsp;returns&nbsp;the&nbsp;gcd&nbsp;of&nbsp;two&nbsp;integers,&nbsp;a&nbsp;and&nbsp;b.</tt></dd></dl>
+ <dl><dt><a name="-LCM"><strong>LCM</strong></a>(a, b)</dt><dd><tt><a href="#-LCM">LCM</a>(a,b)&nbsp;returns&nbsp;the&nbsp;lcm&nbsp;of&nbsp;two&nbsp;integers,&nbsp;a&nbsp;and&nbsp;b.</tt></dd></dl>
+ <dl><dt><a name="-LinCongEqn"><strong>LinCongEqn</strong></a>(a, b, m)</dt><dd><tt><a href="#-LinCongEqn">LinCongEqn</a>(a,b,m)&nbsp;gives&nbsp;all&nbsp;solutions&nbsp;to&nbsp;the&nbsp;congruence&nbsp;equation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a*x&nbsp;=&nbsp;b&nbsp;(mod&nbsp;m)<br>
+where&nbsp;0&lt;=&nbsp;x&nbsp;&lt;m<br>
+It&nbsp;returns&nbsp;all&nbsp;solutions&nbsp;if&nbsp;exist,&nbsp;and&nbsp;return&nbsp;[-1]&nbsp;otherwise.<br>
+&nbsp;<br>
+Example:&nbsp;2*x&nbsp;=&nbsp;4&nbsp;(mod&nbsp;20)&nbsp;has&nbsp;two&nbsp;solutions,&nbsp;x&nbsp;=&nbsp;2,&nbsp;x&nbsp;=&nbsp;12,&nbsp;so<br>
+<a href="#-LinCongEqn">LinCongEqn</a>(2,4,20)&nbsp;=&nbsp;[2,&nbsp;12]</tt></dd></dl>
+ <dl><dt><a name="-NumOfFactors"><strong>NumOfFactors</strong></a>(n)</dt><dd><tt><a href="#-NumOfFactors">NumOfFactors</a>(n)&nbsp;returns&nbsp;the&nbsp;number&nbsp;of&nbsp;distinct&nbsp;factors&nbsp;of&nbsp;n.<br>
+&nbsp;<br>
+For&nbsp;example,&nbsp;6&nbsp;has&nbsp;four&nbsp;factors&nbsp;1,&nbsp;2,&nbsp;3,&nbsp;6,&nbsp;so&nbsp;<a href="#-NumOfFactors">NumOfFactors</a>(6)=4.</tt></dd></dl>
+ <dl><dt><a name="-Phi"><strong>Phi</strong></a>(n)</dt><dd><tt><a href="#-Phi">Phi</a>(n)&nbsp;is&nbsp;the&nbsp;Euler&nbsp;totient&nbsp;function,&nbsp;which&nbsp;is&nbsp;the&nbsp;number&nbsp;of<br>
+positive&nbsp;integers&nbsp;not&nbsp;greater&nbsp;than&nbsp;n&nbsp;that&nbsp;are&nbsp;coprime&nbsp;to&nbsp;n.<br>
+&nbsp;<br>
+For&nbsp;example,&nbsp;in&nbsp;1,&nbsp;2,&nbsp;...&nbsp;,&nbsp;12,&nbsp;the&nbsp;integers&nbsp;coprime&nbsp;to&nbsp;12&nbsp;are<br>
+1,&nbsp;5,&nbsp;7,&nbsp;11,&nbsp;so&nbsp;<a href="#-Phi">Phi</a>(12)&nbsp;=&nbsp;4.</tt></dd></dl>
+ <dl><dt><a name="-PowMod"><strong>PowMod</strong></a>(a, k, n)</dt><dd><tt><a href="#-PowMod">PowMod</a>(a,k,n)&nbsp;returns&nbsp;a^k&nbsp;mod&nbsp;n,&nbsp;here&nbsp;k&nbsp;could&nbsp;be&nbsp;negative.&nbsp;If<br>
+it&nbsp;doesn't&nbsp;exist,&nbsp;return&nbsp;-1.<br>
+&nbsp;<br>
+Example:&nbsp;1&nbsp;=&nbsp;4&nbsp;(mod&nbsp;3),&nbsp;so&nbsp;2^(-1)&nbsp;=&nbsp;1/2&nbsp;=&nbsp;4/2&nbsp;=&nbsp;2&nbsp;(mod&nbsp;3),&nbsp;thus<br>
+<a href="#-PowMod">PowMod</a>(2,-1,3)&nbsp;=&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-SquareFree"><strong>SquareFree</strong></a>(n)</dt><dd><tt><a href="#-SquareFree">SquareFree</a>(n)&nbsp;return&nbsp;True&nbsp;if&nbsp;n&nbsp;is&nbsp;square&nbsp;free,&nbsp;and&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+Example:&nbsp;12&nbsp;has&nbsp;a&nbsp;factor&nbsp;4,&nbsp;which&nbsp;is&nbsp;a&nbsp;square,&nbsp;so&nbsp;<a href="#-SquareFree">SquareFree</a>(12)<br>
+is&nbsp;False.</tt></dd></dl>
+ <dl><dt><a name="-SumOfFactors"><strong>SumOfFactors</strong></a>(n)</dt><dd><tt><a href="#-SumOfFactors">SumOfFactors</a>(n)&nbsp;returns&nbsp;sum&nbsp;of&nbsp;distinct&nbsp;factors&nbsp;of&nbsp;n.<br>
+&nbsp;<br>
+For&nbsp;example,&nbsp;6&nbsp;has&nbsp;four&nbsp;factors&nbsp;1,&nbsp;2,&nbsp;3,&nbsp;6,&nbsp;so&nbsp;<br>
+<a href="#-SumOfFactors">SumOfFactors</a>(6)&nbsp;=&nbsp;1&nbsp;+&nbsp;2&nbsp;+&nbsp;3&nbsp;+&nbsp;6&nbsp;=&nbsp;12.</tt></dd></dl>
+</td></tr></table>
+</body></html>
